@@ -31,9 +31,9 @@ public:
     //         m_obj->delRef();
     // }
 
-    ~PycRef<_Obj>& operator=(_Obj* obj)
+    ~PycRef<_Obj>()
     {
-        if (m_obj)
+        if (obj.m_obj)
             m_obj->delRef();
     }
 

@@ -31,12 +31,6 @@ public:
     //         m_obj->delRef();
     // }
 
-    ~PycRef<_Obj>()
-    {
-        if (obj.m_obj)
-            m_obj->delRef();
-    }
-
     PycRef<_Obj>& operator=(_Obj* obj)
     {
         if (obj)

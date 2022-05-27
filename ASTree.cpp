@@ -2455,7 +2455,7 @@ PycRef<ASTNode> BuildFromCode(PycRef<PycCode> code, PycModule* mod)
             break;
         case Pyc::YIELD_FROM:
             {
-                PycRef<ASTNode> dest = stack.top();
+                // PycRef<ASTNode> dest = stack.top();
                 stack.pop();
                 // TODO: Support yielding into a non-null destination
                 PycRef<ASTNode> value = stack.top();

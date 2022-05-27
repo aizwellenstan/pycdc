@@ -25,7 +25,13 @@ public:
         obj.m_obj = nullptr;
     }
 
-    ~PycRef<_Obj>()
+    // ~PycRef<_Obj>()
+    // {
+    //     if (m_obj)
+    //         m_obj->delRef();
+    // }
+
+    ~PycRef<_Obj>& operator=(_Obj* obj)
     {
         if (m_obj)
             m_obj->delRef();
